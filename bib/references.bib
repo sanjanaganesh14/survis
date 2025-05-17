@@ -11,7 +11,7 @@
   doi       = {10.1109/TIP.2021.3070752},
   url       = {https://doi.org/10.1109/TIP.2021.3070752},
   abstract  = {Magnetic Resonance Imaging (MRI) is a widely used imaging technique to assess brain tumor. Accurately segmenting brain tumor from MR images is the key to clinical diagnostics and treatment planning. In addition, multi-modal MR images can provide complementary information for accurate brain tumor segmentation. However, it's common to miss some imaging modalities in clinical practice. In this paper, we present a novel brain tumor segmentation algorithm with missing modalities. Since it exists a strong correlation between multi-modalities, a correlation model is proposed to specially represent the latent multi-source correlation. Thanks to the obtained correlation representation, the segmentation becomes more robust in the case of missing modality. First, the individual representation produced by each encoder is used to estimate the modality independent parameter. Then, the correlation model transforms all the individual representations to the latent multi-source correlation representations. Finally, the correlation representations across modalities are fused via attention mechanism into a shared representation to emphasize the most important features for segmentation. We evaluate our model on BraTS 2018 and BraTS 2019 dataset, it outperforms the current state-of-the-art methods and produces robust results when one or more modalities are missing.},
-  keywords  = {type:article, multi-modal, missing-modality, correlation-learning},
+  keywords  = {type:missing-modality, multi-modal, missing-modality, correlation-learning},
   catogory  = {missing-modality}
 }
 
@@ -28,7 +28,7 @@
   doi       = {10.1016/j.neucom.2021.09.032},
   url       = {https://doi.org/10.1016/j.neucom.2021.09.032},
   abstract  = {Using multimodal Magnetic Resonance Imaging (MRI) is necessary for accurate brain tumor segmentation. The main problem is that not all types of MRIs are always available in clinical exams. Based on the fact that there is a strong correlation between MR modalities of the same patient, in this work, we propose a novel brain tumor segmentation network in the case of missing one or more modalities. The proposed network consists of three sub-networks: a feature-enhanced generator, a correlation constraint block and a segmentation network. The feature-enhanced generator utilizes the available modalities to generate 3D feature-enhanced image representing the missing modality. The correlation constraint block can exploit the multi-source correlation between the modalities and also constrain the generator to synthesize a feature-enhanced modality which must have a coherent correlation with the available modalities. The segmentation network is a multi-encoder based U-Net to achieve the final brain tumor segmentation. The proposed method is evaluated on BraTS 2018 dataset. Experimental results demonstrate the effectiveness of the proposed method which achieves the average Dice Score of 82.9, 74.9 and 59.1 on whole tumor, tumor core and enhancing tumor, respectively across all the situations, and outperforms the best method by 3.5%, 17% and 18.2%.},
-  keywords  = {type:article, feature-generation, multi-modality-fusion, missing-modality},
+  keywords  = {type:missing-modality, feature-generation, multi-modality-fusion, missing-modality},
   catogory  = {missing-modality}
 }
 
@@ -45,7 +45,7 @@
   doi       = {10.1109/TMI.2022.3175478},
   url       = {https://doi.org/10.1109/TMI.2022.3175478},
   abstract  = {Multi-modal Magnetic Resonance Imaging (MRI) can provide complementary information for automatic brain tumor segmentation, which is crucial for diagnosis and prognosis. While missing modality data is common in clinical practice and it can result in the collapse of most previous methods relying on complete modality data. Current state-of-the-art approaches cope with the situations of missing modalities by fusing multi-modal images and features to learn shared representations of tumor regions, which often ignore explicitly capturing the correlations among modalities and tumor regions. Inspired by the fact that modality information plays distinct roles to segment different tumor regions, we aim to explicitly exploit the correlations among various modality-specific information and tumor-specific knowledge for segmentation. To this end, we propose a Dual Disentanglement Network (D2-Net) for brain tumor segmentation with missing modalities, which consists of a modality disentanglement stage (MD-Stage) and a tumor-region disentanglement stage (TD-Stage). In the MD-Stage, a spatial-frequency joint modality contrastive learning scheme is designed to directly decouple the modality-specific information from MRI data. To decompose tumor-specific representations and extract discriminative holistic features, we propose an affinity-guided dense tumor-region knowledge distillation mechanism in the TD-Stage through aligning the features of a disentangled binary teacher network with a holistic student network. By explicitly discovering relations among modalities and tumor regions, our model can learn sufficient information for segmentation even if some modalities are missing. Extensive experiments on the public BraTS-2018 database demonstrate the superiority of our framework over state-of-the-art methods in missing modalities situations. Codes are available at https://github.com/CityU-AIM-Group/D2Net.},
-  keywords  = {type:article, disentanglement, knowledge-distillation, missing-modality},
+  keywords  = {type:missing-modality, disentanglement, knowledge-distillation, missing-modality},
   catogory  = {missing-modality}
 }
 
@@ -60,7 +60,7 @@
   doi       = {10.1109/ICCV51070.2023.01958},
   url       = {https://doi.org/10.1109/ICCV51070.2023.01958},
   abstract  = {In medical vision, different imaging modalities provide complementary information. However, in practice, not all modalities may be available during inference or even training. Previous approaches, e.g., knowledge distillation or image synthesis, often assume the availability of full modalities for all subjects during training; this is unrealistic and impractical due to the variability in data collection across sites. We propose a novel approach to learn enhanced modality-agnostic representations by employing a metalearning strategy in training, even when only limited full modality samples are available. Meta-learning enhances partial modality representations to full modality representations by meta-training on partial modality data and metatesting on limited full modality samples. Additionally, we co-supervise this feature enrichment by introducing an auxiliary adversarial learning branch. More specifically, a missing modality detector is used as a discriminator to mimic the full modality setting. Our segmentation framework significantly outperforms state-of-the-art brain tumor segmentation techniques in missing modality scenarios.},
-  keywords  = {type:inproceedings, meta-learning, modality-agnostic, missing-modality},
+  keywords  = {type:missing-modality, meta-learning, modality-agnostic, missing-modality},
   catogory  = {missing-modality}
 }
 
@@ -76,7 +76,7 @@
   doi       = {10.48550/arXiv.2203.06217},
   url       = {https://arxiv.org/abs/2203.06217},
   abstract  = {TDealing with missing modalities in Magnetic Resonance Imaging (MRI) and overcoming their negative repercussions is considered a hurdle in biomedical imaging. The combination of a specified set of modalities, which is selected depending on the scenario and anatomical part being scanned, will provide medical practitioners with full information about the region of interest in the human body, hence the missing MRI sequences should be reimbursed. The compensation of the adverse impact of losing useful information owing to the lack of one or more modalities is a well-known challenge in the field of computer vision, particularly for medical image processing tasks including tumour segmentation, tissue classification, and image generation. Various approaches have been developed over time to mitigate this problem's negative implications and this literature review goes through a significant number of the networks that seek to do so. The approaches reviewed in this work are reviewed in detail, including earlier techniques such as synthesis methods as well as later approaches that deploy deep learning, such as common latent space models, knowledge distillation networks, mutual information maximization, and generative adversarial networks (GANs). This work discusses the most important approaches that have been offered at the time of this writing, examining the novelty, strength, and weakness of each one. Furthermore, the most commonly used MRI datasets are highlighted and described. The main goal of this research is to offer a performance evaluation of missing modality compensating networks, as well as to outline future strategies for dealing with this issue.},
-  keywords  = {type:article, survey, missing-modality},
+  keywords  = {type:missing-modality, survey, missing-modality},
   catogory  = {missing-modality}
 }
 
@@ -92,7 +92,7 @@
   doi       = {10.48550/arXiv.2204.02961},
   url       = {https://doi.org/10.48550/arXiv.2204.02961},
   abstract  = {Gliomas are one of the most prevalent types of primary brain tumours, accounting for more than 30\% of all cases and they develop from the glial stem or progenitor cells. In theory, the majority of brain tumours could well be identified exclusively by the use of Magnetic Resonance Imaging (MRI). Each MRI modality delivers distinct information on the soft tissue of the human brain and integrating all of them would provide comprehensive data for the accurate segmentation of the glioma, which is crucial for the patient's prognosis, diagnosis, and determining the best follow-up treatment. Unfortunately, MRI is prone to artifacts for a variety of reasons, which might result in missing one or more MRI modalities. Various strategies have been proposed over the years to synthesize the missing modality or compensate for the influence it has on automated segmentation models. However, these methods usually fail to model the underlying missing information. In this paper, we propose a style matching U-Net (SMU-Net) for brain tumour segmentation on MRI images. Our co-training approach utilizes a content and style-matching mechanism to distill the informative features from the full-modality network into a missing modality network. To do so, we encode both full-modality and missing-modality data into a latent space, then we decompose the representation space into a style and content representation. Our style matching module adaptively recalibrates the representation space by learning a matching function to transfer the informative and textural features from a full-modality path into a missing-modality path. Moreover, by modelling the mutual information, our content module surpasses the less informative features and re-calibrates the representation space based on discriminative semantic features. The evaluation process on the BraTS 2018 dataset shows a significant results.},
-  keywords  = {type:article, style-matching, U-Net, missing-modality},
+  keywords  = {type:missing-modality, style-matching, U-Net, missing-modality},
   catogory  = {missing-modality}
 }
 
@@ -107,7 +107,7 @@
   doi       = {10.1109/WACV56688.2023.00614},
   url       = {https://doi.org/10.1109/WACV56688.2023.00614},
   abstract  = {Convolutional neural networks (CNNs) have been the consensus for medical image segmentation tasks. However, they suffer from the limitation in modeling long-range dependencies and spatial correlations due to the nature of convolution operation. Although transformers were first developed to address this issue, they fail to capture low-level features. In contrast, it is demonstrated that both local and global features are crucial for dense prediction, such as segmenting in challenging contexts. In this paper, we propose HiFormer, a novel method that efficiently bridges a CNN and a transformer for medical image segmentation. Specifically, we design two multi-scale feature representations using the seminal Swin Transformer module and a CNN-based encoder. To secure a fine fusion of global and local features obtained from the two aforementioned representations, we propose a Double-Level Fusion (DLF) module in the skip connection of the encoder-decoder structure. Extensive experiments on various medical image segmentation datasets demonstrate the effectiveness of HiFormer over other CNN-based, transformer-based, and hybrid methods in terms of computational complexity, quantitative and qualitative results. Our code is publicly available at GitHub.},
-  keywords  = {type:inproceedings, transformer, multi-scale, medical-segmentation},
+  keywords  = {type:transformer-segmentation, transformer, multi-scale, medical-segmentation},
   catogory  = {transformer-segmentation}
 }
 
@@ -122,7 +122,7 @@
   doi       = {10.1109/ICCVW54120.2021.00366},
   url       = {https://doi.org/10.1109/ICCVW54120.2021.00366},
   abstract  = {The human visual cortex is biased towards shape components while CNNs produce texture biased features. This fact may explain why the performance of CNN significantly degrades with low-labeled input data scenarios. In this paper, we propose a frequency re-calibration U-Net (FRCU-Net) for medical image segmentation. Representing an object in terms of frequency may reduce the effect of texture bias, resulting in better generalization for a low data regime. To do so, we apply the Laplacian pyramid in the bottleneck layer of the U-shaped structure. The Laplacian pyramid represents the object proposal in different frequency domains, where the high frequencies are responsible for the texture information and lower frequencies might be related to the shape. Adaptively re-calibrating these frequency representations can produce a more discriminative representation for describing the object of interest. To this end, we first propose to use a channel-wise attention mechanism to capture the relationship between the channels of a set of feature maps in one layer of the frequency pyramid. Second, the extracted features of each level of the pyramid are then combined through a non-linear function based on their impact on the final segmentation output. The proposed FRCU-Net is evaluated on five datasets ISIC 2017, ISIC 2018, the PH2, lung segmentation, and SegPC 2021 challenge datasets and compared to existing alternatives, achieving state-of-the-art results.},
-  keywords  = {type:inproceedings, frequency-recalibration, U-Net, medical-segmentation},
+  keywords  = {type:frequency-segmentation, frequency-recalibration, U-Net, medical-segmentation},
   catogory  = {frequency-segmentation}
 }
 
@@ -137,7 +137,7 @@
   doi       = {10.1109/CVPRW59228.2023.00175},
   url       = {https://doi.org/10.1109/CVPRW59228.2023.00175},
   abstract  = {Single-image super-resolution technology has become a topic of extensive research in various applications, aiming to enhance the quality and resolution of degraded images obtained from low-resolution sensors. However, most existing studies on single-image super-resolution have primarily focused on developing deep learning networks operating on high-performance graphics processing units. Therefore, this study proposes a lightweight real-time image super-resolution network for 4K images. Furthermore, we applied a reparameterization method to improve the network performance without incurring additional computational costs. The experimental results demonstrate that the proposed network achieves a PSNR of 30.15 dB and an inference time of 4.75 ms on an RTX 3090Ti device, as evaluated on the NTIRE 2023 Real-Time Super-Resolution validation scale X3 dataset. The code is available at https://github.com/Ganzooo/LRSRN.git.},
-  keywords  = {type:inproceedings, lightweight, real-time, super-resolution},
+  keywords  = {type:image-super-resolution, lightweight, real-time, super-resolution},
   catogory  = {image-super-resolution}
 }
 
@@ -152,6 +152,6 @@
   doi       = {10.1109/CVPR52688.2022.00588},
   url       = {https://doi.org/10.1109/CVPR52688.2022.00588},
   abstract  = {A recurrent structure is a popular framework choice for the task of video super-resolution. The state-of-the-art method BasicVSR adopts bidirectional propagation with feature alignment to effectively exploit information from the entire input video. In this study, we redesign BasicVsr by proposing second-order grid propagation and flow-guided deformable alignment. We show that by empowering the re-current framework with enhanced propagation and align-ment, one can exploit spatiotemporal information across misaligned video frames more effectively. The new components lead to an improved performance under a simi-lar computational constraint. In particular, our model Ba-sicVSR++ surpasses BasicVSR by a significant 0.82 dB in PSNR with similar number of parameters. BasicVSR++ is generalizable to other video restoration tasks, and obtains three champions and one first runner-up in NTIRE 2021 video restoration challenge.},
-  keywords  = {type:inproceedings, video-super-resolution, propagation, deformable-alignment},
+  keywords  = {type:image-super-resolution, video-super-resolution, propagation, deformable-alignment},
   catogory  = {image-super-resolution}
 }
