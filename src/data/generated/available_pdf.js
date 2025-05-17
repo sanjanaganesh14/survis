@@ -1,1 +1,1 @@
-const availablePdf = [];
+const availablePdf = ["Yang2022D2Net","Gankhuyag2023LRSRN","Zhou2021LatentCorrelation","Azad2022SMUNet","Azad2022Review","Heidari2023HiFormer","Zhou2021FeatureEnhanced","Chan2022BasicVSRpp","Konwer2023MetaLearning","Azad2021FRCUNet"];
